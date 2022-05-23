@@ -1,0 +1,31 @@
+@use "../presets" as *;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    font-family: $font-main;
+    font-size: $font-size;
+    color: $color-gray;
+}
+
+a {
+    text-decoration: none;
+    color: $color-light;
+}
+
+h1 {
+    letter-spacing: 0.08em;
+    font-family: $font-header;
+    font-weight: 300;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-size: 3.75em;
+}
