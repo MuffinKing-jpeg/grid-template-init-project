@@ -12,23 +12,26 @@
         margin-right: 2px;
         cursor: pointer;
         height: 100%;
-        padding-left: $gap-x2;
     }
 }
 
 .header-navlist {
     @include unlist;
     display: flex;
-    gap: $gap-x2;
     align-items: center;
     justify-content: center;
     letter-spacing: 0.1rem;
     height: 100%;
     font-size: 1.125rem;
 
+    @include md-min {
+        gap: $gap-x2;
+    }
+
     @include md {
         position: absolute;
         flex-direction: column;
+        justify-content: space-between;
         right: 0;
         bottom: 0;
         transform: translateY(calc(100%));
@@ -37,7 +40,7 @@
         height: 0;
         padding: 0 $gap;
         overflow: hidden;
-        @include transition;
+        transition: height $transiton-speed * 2, padding $transiton-speed * 2;
         &__item {
             width: 100%;
             text-align: right;
@@ -45,7 +48,7 @@
     }
 
     &__item {
-        @include transition(color);
+        transition: color $transiton-speed;
         a {
             color: inherit;
         }
@@ -53,6 +56,22 @@
             cursor: pointer;
             color: $color-accent;
         }
+    }
+}
+.navbar-toggle__stroke {
+    transition: transform $transiton-speed;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+.active .navbar-toggle__stroke {
+    &--1 {
+        transform: rotate(45deg) translate(25%, 300%);
+    }
+    &--2 {
+        transform: translateX(-110%);
+    }
+    &--3 {
+        transform: rotate(-45deg) translate(25%, -300%);
     }
 }
 

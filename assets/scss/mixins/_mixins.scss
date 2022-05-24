@@ -64,7 +64,3 @@
 @mixin box-shadow {
     box-shadow: -3px 3px 20px -10px darken($color-gray-dark, 40%);
 }
-
-@mixin transition($feature: all, $timing: 300ms) {
-    transition: $feature $timing ease-in;
-}

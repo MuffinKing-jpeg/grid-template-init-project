@@ -1,0 +1,24 @@
+@use "../../../mixins" as *;
+@use "../../../presets" as *;
+
+.skill-item {
+    background-color: $color-gray-dark;
+    position: relative;
+    &__title {
+        @include abs-position;
+        margin: 0;
+        padding: $gap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & a:hover {
+            color: $color-accent;
+        }
+    }
+}
+
+@for $i from 1 to 9 {
+    .skill-item:nth-of-type(#{$i}) {
+        grid-area: i + $i;
+    }
+}
