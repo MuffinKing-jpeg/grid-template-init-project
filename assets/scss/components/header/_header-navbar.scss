@@ -3,6 +3,17 @@
 
 .navbar-toggle {
     display: none;
+    &__stroke {
+        fill: $color-light;
+    }
+
+    @include md {
+        display: inline-block;
+        margin-right: 2px;
+        cursor: pointer;
+        height: 100%;
+        padding-left: $gap-x2;
+    }
 }
 
 .header-navlist {
@@ -15,6 +26,24 @@
     height: 100%;
     font-size: 1.125rem;
 
+    @include md {
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        bottom: 0;
+        transform: translateY(calc(100%));
+        margin-right: $gap;
+        background-color: $color-gray-dark;
+        height: 0;
+        padding: 0 $gap;
+        overflow: hidden;
+        @include transition;
+        &__item {
+            width: 100%;
+            text-align: right;
+        }
+    }
+
     &__item {
         @include transition(color);
         a {
@@ -24,5 +53,12 @@
             cursor: pointer;
             color: $color-accent;
         }
+    }
+}
+
+.active.header-navlist {
+    @include md {
+        height: 200px;
+        padding: $gap;
     }
 }

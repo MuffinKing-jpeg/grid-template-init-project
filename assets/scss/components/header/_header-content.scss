@@ -27,5 +27,9 @@
         justify-content: center;
         width: 100%;
         gap: $gap;
+
+        @include sm {
+            flex-wrap: wrap;
+        }
     }
 }

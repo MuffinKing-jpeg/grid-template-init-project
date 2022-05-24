@@ -2,17 +2,32 @@
 @use "../presets" as *;
 
 .btn {
-    min-width: 250px;
-    height: 60px;
     border-width: 2px;
     border-style: solid;
     padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.125em;
     letter-spacing: 0.1em;
     @include transition(background-color);
+
+    @include lg-min {
+        min-width: 250px;
+        height: 60px;
+        font-size: 1.125em;
+    }
+
+    @include lg-md {
+        min-width: 200px;
+        height: 50px;
+        font-size: 1em;
+    }
+
+    @include md {
+        min-width: 170px;
+        height: 40px;
+        font-size: 1em;
+    }
 
     &--light {
         background-color: rgba($color-light, $alpha: 0.1);

@@ -1,9 +1,9 @@
 
 $(document).ready(function () {
 
-  $('.header-navbar__hamburger').on('click', function () {
+  $('.navbar-toggle').on('click', function () {
     $(this).toggleClass('active');
-    $('.header-navbar__list').toggleClass('active');
+    $('.header-navlist').toggleClass('active');
   });
 
 });

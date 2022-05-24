@@ -6,8 +6,14 @@
     width: 100%;
     margin: 0 auto;
     padding: $gap;
+    padding-bottom: 12px;
     max-width: $ul;
     z-index: 1;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    @include md {
+        background-color: rgba($color-gray-dark, $alpha: 0.25);
+    }
 }
