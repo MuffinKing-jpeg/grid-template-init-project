@@ -10,26 +10,41 @@
     align-items: center;
     letter-spacing: 0.1em;
 
-    @include lg-min {
-        min-width: 250px;
-        height: 60px;
-        font-size: 1.125em;
-    }
-
-    @include lg-md {
-        min-width: 200px;
-        height: 50px;
-        font-size: 1em;
-    }
-
-    @include md {
-        min-width: 170px;
-        height: 40px;
-        font-size: 1em;
-    }
-
     &--light {
-        background-color: rgba($color-light, $alpha: 0.1);
+        background-color: rgba($color-light, 0.1);
+        @include lg-min {
+            min-width: 250px;
+            height: 60px;
+            font-size: 1.125em;
+        }
+
+        @include lg-md {
+            min-width: 200px;
+            height: 50px;
+            font-size: 1em;
+        }
+
+        @include md {
+            min-width: 170px;
+            height: 40px;
+            font-size: 1em;
+        }
+    }
+
+    &--dark {
+        background-color: rgba($color-primary, 0.8);
+        border-color: $color-primary;
+        font-size: 1.125em;
+        @include sm-min {
+            min-width: 350px;
+            height: 60px;
+        }
+
+        @include md {
+            min-width: 170px;
+            height: 40px;
+            font-size: 1em;
+        }
     }
 
     &:hover {

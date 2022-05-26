@@ -1,20 +1,22 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
 
-.header-menu {
-    &__logo {
+.header-logo {
+    padding: $gap $gap $gap 0;
+    &__link {
         text-transform: uppercase;
         letter-spacing: 0.22em;
         font-size: 1.5rem;
-        &--accent {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            padding: 14px 1px 13px 5px;
-            border-style: solid;
-            border-width: 3px;
-            border-color: $color-highlight;
-            margin-right: 4px;
-        }
+        display: inline-block;
+    }
+    &--accent {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 1px 13px 5px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: $color-highlight;
+        margin-right: 4px;
     }
 }
