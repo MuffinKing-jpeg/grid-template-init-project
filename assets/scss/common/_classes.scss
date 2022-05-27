@@ -2,15 +2,14 @@
 @use "../presets" as *;
 
 .btn {
-    border-width: 2px;
     border-style: solid;
-    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
     letter-spacing: 0.1em;
 
     &--light {
+        border-width: 2px;
         background-color: rgba($color-light, 0.1);
         @include lg-min {
             min-width: 250px;
@@ -31,19 +30,19 @@
         }
     }
 
-    &--dark {
+    &--primary {
         background-color: rgba($color-primary, 0.8);
         border-color: $color-primary;
         font-size: 1.125em;
-        @include sm-min {
-            min-width: 350px;
-            height: 60px;
+        height: 60px;
+        width: 350px;
+
+        @include md-sm {
+            min-width: 170px;
         }
 
-        @include md {
-            min-width: 170px;
-            height: 40px;
-            font-size: 1em;
+        @include sm {
+            width: 100%;
         }
     }
 

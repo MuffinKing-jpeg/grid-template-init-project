@@ -2,9 +2,10 @@
 @use "../../../presets" as *;
 
 .skills {
+    letter-spacing: 0.055em;
     width: 100%;
+
     &__container {
-        min-height: 100vh;
         display: grid;
         gap: $gap-sm;
 
@@ -43,12 +44,12 @@
                 "i7"
                 "i8"
                 "i9";
-            padding: $gap;
+            padding: 0 0 $gap 0;
             gap: $gap;
         }
         @include sm-min {
             gap: $gap-sm;
-            padding: $gap-sm;
+            padding-bottom: $gap;
         }
 
         @media screen and (min-height: 691px) {
@@ -62,5 +63,16 @@
     &__action {
         display: flex;
         justify-content: center;
+        @include md-min {
+            margin-bottom: $gap-lg;
+        }
+    }
+
+    @include sm-min {
+        padding: $gap-sm;
+    }
+
+    @include sm {
+        padding: $gap;
     }
 }

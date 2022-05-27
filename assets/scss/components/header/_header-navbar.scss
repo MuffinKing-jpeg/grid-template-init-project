@@ -3,6 +3,7 @@
 
 .navbar-toggle {
     display: none;
+    margin-left: 0;
     &__stroke {
         fill: $color-light;
     }
@@ -33,8 +34,7 @@
         position: absolute;
         display: block;
         right: $gap;
-        bottom: 0;
-        transform: translateY(calc(100%));
+        top: 100%;
         background-color: rgba($color-gray-dark, 0.9);
         height: 0;
         overflow: hidden;
@@ -80,6 +80,6 @@
 
 .active.header-navlist {
     @include md {
-        height: 202px;
+        height: 203px;
     }
 }
