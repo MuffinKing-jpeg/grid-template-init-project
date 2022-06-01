@@ -39,7 +39,10 @@
         height: 0;
         overflow: hidden;
         box-shadow: -3px 3px 20px -10px black;
-        transition: height $transiton-speed * 2 ease-in;
+        transition: height $transiton-speed * 2;
+        .active & {
+            height: 203px;
+        }
         &__item {
             text-align: right;
             margin: $gap $gap-sm;
@@ -55,6 +58,7 @@
         a {
             color: inherit;
         }
+
         &:hover {
             cursor: pointer;
             color: $color-accent;
@@ -65,21 +69,16 @@
     transition: transform $transiton-speed;
     transform-box: fill-box;
     transform-origin: center;
-}
-.active .navbar-toggle__stroke {
-    &--1 {
-        transform: rotate(45deg) translate(20%, 270%);
-    }
-    &--2 {
-        transform: translateX(-110%);
-    }
-    &--3 {
-        transform: rotate(-45deg) translate(20%, -270%);
-    }
-}
 
-.active.header-navlist {
-    @include md {
-        height: 203px;
+    .active & {
+        &--1 {
+            transform: rotate(45deg) translate(20%, 270%);
+        }
+        &--2 {
+            transform: translateX(-110%);
+        }
+        &--3 {
+            transform: rotate(-45deg) translate(20%, -270%);
+        }
     }
 }

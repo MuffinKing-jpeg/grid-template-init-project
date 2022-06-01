@@ -348,7 +348,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.footer__container, .posts__container, .form__container, .about__container, .header-content__container {
+.footer__container, .posts__container, .form__container, .about__container, .skills__container, .header-content__container {
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
@@ -412,6 +412,9 @@ input:focus {
 }
 
 .btn {
+  -webkit-transition: background-color 500ms, color 500ms, border 500ms;
+  -o-transition: background-color 500ms, color 500ms, border 500ms;
+  transition: background-color 500ms, color 500ms, border 500ms;
   border-style: solid;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,7 +553,6 @@ input:focus {
       -ms-transform-origin: center;
           transform-origin: center;
 }
-
 .active .navbar-toggle__stroke--1 {
   -webkit-transform: rotate(45deg) translate(20%, 270%);
       -ms-transform: rotate(45deg) translate(20%, 270%);
@@ -1133,9 +1135,12 @@ input:focus {
     overflow: hidden;
     -webkit-box-shadow: -3px 3px 20px -10px black;
             box-shadow: -3px 3px 20px -10px black;
-    -webkit-transition: height 1000ms ease-in;
-    -o-transition: height 1000ms ease-in;
-    transition: height 1000ms ease-in;
+    -webkit-transition: height 1000ms;
+    -o-transition: height 1000ms;
+    transition: height 1000ms;
+  }
+  .active .header-navlist {
+    height: 203px;
   }
   .header-navlist__item {
     text-align: right;
@@ -1144,9 +1149,6 @@ input:focus {
   .header-navlist__item a {
     padding: 10px 20px;
     display: block;
-  }
-  .active.header-navlist {
-    height: 203px;
   }
   .header-content__actions {
     -webkit-box-orient: vertical;
@@ -1184,7 +1186,7 @@ input:focus {
 }
 @media screen and (max-height: 690px) {
   .skills__container {
-    grid-auto-rows: 220px;
+    grid-auto-rows: 233.3333333333px;
   }
 }
 @media (max-width: 575.8px) {

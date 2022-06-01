@@ -6,6 +6,8 @@
     width: 100%;
 
     &__container {
+        @extend %container;
+
         display: grid;
         gap: $gap-sm;
 
@@ -57,7 +59,7 @@
         }
 
         @media screen and (max-height: 690px) {
-            grid-auto-rows: 220px;
+            grid-auto-rows: calc(220px + $gap-sm * 4 / 3);
         }
     }
     &__action {

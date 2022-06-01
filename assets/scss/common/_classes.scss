@@ -2,6 +2,8 @@
 @use "../presets" as *;
 
 .btn {
+    transition: background-color $transiton-speed, color $transiton-speed,
+        border $transiton-speed;
     border-style: solid;
     display: flex;
     justify-content: center;
