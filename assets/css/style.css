@@ -569,6 +569,10 @@ input:focus {
           transform: rotate(-45deg) translate(20%, -270%);
 }
 
+.active.header-navlist {
+  height: 203px;
+}
+
 .header-content {
   position: absolute;
   top: 0;
@@ -1138,9 +1142,6 @@ input:focus {
     -webkit-transition: height 1000ms;
     -o-transition: height 1000ms;
     transition: height 1000ms;
-  }
-  .active .header-navlist {
-    height: 203px;
   }
   .header-navlist__item {
     text-align: right;

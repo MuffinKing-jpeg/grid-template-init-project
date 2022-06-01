@@ -40,9 +40,6 @@
         overflow: hidden;
         box-shadow: -3px 3px 20px -10px black;
         transition: height $transiton-speed * 2;
-        .active & {
-            height: 203px;
-        }
         &__item {
             text-align: right;
             margin: $gap $gap-sm;
@@ -81,4 +78,7 @@
             transform: rotate(-45deg) translate(20%, -270%);
         }
     }
+}
+.active.header-navlist {
+    height: 203px;
 }
